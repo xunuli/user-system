@@ -1,0 +1,57 @@
+[2024-06-04 19:23:25] INFO[db.go:26] mysql addr:root:123456@(192.168.198.130:3306)/camps_user?charset=utf8&parseTime=True&loc=Local
+[2024-06-04 19:23:25] INFO[user.go:49] user ==== &{ID:0 Name:xuji Age:18 Gender:male Password:zxcvbnm520 Nickname:hhhhhh CreateModel:{Creator:xuji CreateTime:0001-01-01 00:00:00 +0000 UTC} ModifyModel:{Modifier:xuji ModifyTime:0001-01-01 00:00:00 +0000 UTC}}
+[2024-06-04 19:23:25] ERROR[user.go:30] CreateUser fail: Error 1054 (42S22): Unknown column 'create_time' in 'field list'
+[2024-06-04 19:23:25] ERROR[user.go:51] Register|CreateUser fail: Error 1054 (42S22): Unknown column 'create_time' in 'field list'
+[2024-06-04 19:28:16] INFO[db.go:27] mysql addr:root:123456@(192.168.198.130:3306)/camps_user?charset=utf8&parseTime=True&loc=Local
+[2024-06-04 19:28:16] INFO[user.go:49] user ==== &{ID:0 Name:xuji Age:18 Gender:male Password:zxcvbnm520 Nickname:hhhhhh CreateModel:{Creator:xuji CreateTime:0001-01-01 00:00:00 +0000 UTC} ModifyModel:{Modifier:xuji ModifyTime:0001-01-01 00:00:00 +0000 UTC}}
+[2024-06-04 19:28:16] INFO[user.go:33] insert success
+[2024-06-04 19:28:40] INFO[api.go:58] loggin start,user:xuji, password:zxcvbnm520
+[2024-06-04 19:28:40] INFO[redis.go:22] redisConfig======{Host:192.168.198.130 Port:6379 Rdb:0 PassWord:123456 PoolSize:100}
+[2024-06-04 19:28:40] INFO[redis.go:36] res ====== OK, err ======== <nil>
+[2024-06-04 19:28:40] INFO[user.go:183] user === &{ID:1 Name:xuji Age:18 Gender:male Password:zxcvbnm520 Nickname:hhhhhh CreateModel:{Creator:xuji CreateTime:2024-06-04 19:28:16.695 +0800 CST} ModifyModel:{Modifier:xuji ModifyTime:2024-06-04 19:28:16.695 +0800 CST}}
+[2024-06-04 19:28:40] INFO[user.go:189] getUserInfo successfully, with key userinfo_xuji
+[2024-06-04 19:28:40] INFO[user.go:83] Login successfully, xuji@xuji with redis_session session_c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:28:40] INFO[user.go:113] 141176a470bd11c3a062aac39722ed8c|GetUserInfo access from,user_name=xuji|session=c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:28:40] ERROR[user.go:121] 141176a470bd11c3a062aac39722ed8c|Failed to get with session=c9036dbc044c5ab1fd8b7cb82e246c39|err =redis: nil
+[2024-06-04 19:31:05] INFO[db.go:26] mysql addr:root:123456@(192.168.198.130:3306)/camps_user?charset=utf8&parseTime=True&loc=Local
+[2024-06-04 19:31:05] ERROR[user.go:31] 用户已经注册，user_name==xuji
+[2024-06-04 19:31:16] INFO[api.go:58] loggin start,user:xuji, password:zxcvbnm520
+[2024-06-04 19:31:16] INFO[redis.go:22] redisConfig======{Host:192.168.198.130 Port:6379 Rdb:0 PassWord:123456 PoolSize:100}
+[2024-06-04 19:31:16] INFO[redis.go:36] res ====== OK, err ======== <nil>
+[2024-06-04 19:31:16] INFO[user.go:171] cahce_user ======= &{1 xuji 18 male zxcvbnm520 hhhhhh {xuji 2024-06-04 19:28:16.695 +0800 CST} {xuji 2024-06-04 19:28:16.695 +0800 CST}}
+[2024-06-04 19:31:16] INFO[user.go:83] Login successfully, xuji@xuji with redis_session session_c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:31:16] INFO[user.go:113] d3c528ab9bd3fd8ef5d4d8b095211013|GetUserInfo access from,user_name=xuji|session=c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:31:16] ERROR[user.go:121] d3c528ab9bd3fd8ef5d4d8b095211013|Failed to get with session=c9036dbc044c5ab1fd8b7cb82e246c39|err =redis: nil
+[2024-06-04 19:31:57] INFO[user.go:91] 560f11acc4f5e58d3def47aa834d40fc|Logout access from,user_name=xuji|session=c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:31:57] ERROR[user.go:95] 560f11acc4f5e58d3def47aa834d40fc|Failed to get with session=c9036dbc044c5ab1fd8b7cb82e246c39|err =redis: nil
+[2024-06-04 19:32:05] INFO[user.go:91] b72720d45e8c58847d3d330739173da2|Logout access from,user_name=xuji|session=c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:32:05] ERROR[user.go:95] b72720d45e8c58847d3d330739173da2|Failed to get with session=c9036dbc044c5ab1fd8b7cb82e246c39|err =redis: nil
+[2024-06-04 19:32:08] INFO[user.go:113] 596d4f75ff80007e10bc66dbef484908|GetUserInfo access from,user_name=xuji|session=c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:32:08] ERROR[user.go:121] 596d4f75ff80007e10bc66dbef484908|Failed to get with session=c9036dbc044c5ab1fd8b7cb82e246c39|err =redis: nil
+[2024-06-04 19:32:09] INFO[user.go:91] 6d8a0c4dc37de73e910ca4591b710c97|Logout access from,user_name=xuji|session=c9036dbc044c5ab1fd8b7cb82e246c39
+[2024-06-04 19:32:09] ERROR[user.go:95] 6d8a0c4dc37de73e910ca4591b710c97|Failed to get with session=c9036dbc044c5ab1fd8b7cb82e246c39|err =redis: nil
+[2024-06-04 19:34:00] INFO[user.go:49] user ==== &{ID:0 Name:lujie Age:19 Gender:male Password:123456 Nickname:xiaolu CreateModel:{Creator:lujie CreateTime:0001-01-01 00:00:00 +0000 UTC} ModifyModel:{Modifier:lujie ModifyTime:0001-01-01 00:00:00 +0000 UTC}}
+[2024-06-04 19:34:00] INFO[user.go:33] insert success
+[2024-06-04 19:34:11] INFO[api.go:58] loggin start,user:lujie, password:123456
+[2024-06-04 19:34:11] INFO[user.go:183] user === &{ID:2 Name:lujie Age:19 Gender:male Password:123456 Nickname:xiaolu CreateModel:{Creator:lujie CreateTime:2024-06-04 19:34:00.532 +0800 CST} ModifyModel:{Modifier:lujie ModifyTime:2024-06-04 19:34:00.532 +0800 CST}}
+[2024-06-04 19:34:11] INFO[user.go:189] getUserInfo successfully, with key userinfo_lujie
+[2024-06-04 19:34:11] INFO[user.go:83] Login successfully, lujie@lujie with redis_session session_4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:34:11] INFO[user.go:113] 909b0f4b3229c35c575c71b699794ea4|GetUserInfo access from,user_name=lujie|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:34:11] ERROR[user.go:121] 909b0f4b3229c35c575c71b699794ea4|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
+[2024-06-04 19:34:50] INFO[user.go:91] 9b188d721fd5cf8868521cef69fb4ed4|Logout access from,user_name=lujie|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:34:50] ERROR[user.go:95] 9b188d721fd5cf8868521cef69fb4ed4|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
+[2024-06-04 19:39:56] INFO[user.go:113] cd1dc38bfed13c17d9b505b538a64d8c|GetUserInfo access from,user_name=|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:40:15] INFO[user.go:113] 995646ad271358a2796ea2940527354b|GetUserInfo access from,user_name="xuji"|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:40:15] INFO[redis.go:22] redisConfig======{Host:192.168.198.130 Port:6379 Rdb:0 PassWord:123456 PoolSize:100}
+[2024-06-04 19:40:15] INFO[redis.go:36] res ====== OK, err ======== <nil>
+[2024-06-04 19:40:15] ERROR[user.go:121] 995646ad271358a2796ea2940527354b|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
+[2024-06-04 19:40:35] INFO[user.go:113] 311cdbb9581d31f57748b731e3d9e984|GetUserInfo access from,user_name=xuji|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:40:35] ERROR[user.go:121] 311cdbb9581d31f57748b731e3d9e984|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
+[2024-06-04 19:41:07] INFO[user.go:113] f7ddafb38115abb561fce3222bf26200|GetUserInfo access from,user_name=xuji|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:41:07] ERROR[user.go:121] f7ddafb38115abb561fce3222bf26200|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
+[2024-06-04 19:41:13] INFO[user.go:113] d3f876b64dd828ecc89d2dcfe9fde680|GetUserInfo access from,user_name=lujie|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:41:13] ERROR[user.go:121] d3f876b64dd828ecc89d2dcfe9fde680|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
+[2024-06-04 19:42:17] INFO[user.go:113] 889416e6307754b51b8c6c5b18199b29|GetUserInfo access from,user_name=lujie|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:42:17] ERROR[user.go:121] 889416e6307754b51b8c6c5b18199b29|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
+[2024-06-04 19:42:48] INFO[user.go:113] 7002b062af8fe49ccb5dca870301221d|GetUserInfo access from,user_name=xuji|session=4554c7c8216059e90c61ded8a9e5049c
+[2024-06-04 19:42:48] ERROR[user.go:121] 7002b062af8fe49ccb5dca870301221d|Failed to get with session=4554c7c8216059e90c61ded8a9e5049c|err =redis: nil
